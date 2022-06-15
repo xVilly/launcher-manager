@@ -26,7 +26,7 @@ namespace launcher_manager
         private void Grid_Loaded(object sender, RoutedEventArgs e)
         {
             labelUser.Content = Messages.AuthenticationJson["user_name"].ToString();
-            labelToken.Content = Messages.AuthenticationJson["authorization_token"].ToString().Substring(0, 8) + "***** ...";
+            labelToken.Content = Messages.AuthenticationJson["authorization_token"].ToString().Substring(0, 8) + "**** ...";
             DateTime d = DateTime.Parse(Messages.AuthenticationJson["exp"].ToString()).ToLocalTime();
             labelExp.Content = d.ToLongTimeString();
 
